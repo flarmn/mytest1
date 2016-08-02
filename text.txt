@@ -1,0 +1,180 @@
+<div class="mod-menu">
+	<ul class="nav menu contact_list">
+
+
+
+	<!-- COMAPNY ADDRESS OUTPUT -->
+	<li class="item-225">
+
+<? if ((isset($_company)) && (!empty($_company->addresses))) : ?>
+                            <? foreach ($_company->addresses as $key => $address) : ?>
+                                
+                            <? endforeach; ?>
+                        <? endif; ?>
+
+<span class="separator">
+<img src="<?=Yii::app()->theme->baseUrl?>/public/site/img/local.png" alt="<?=CHtml::encode($address->value)?>" />
+<span class="image-title"><?=CHtml::encode($address->value)?></span>
+ </span>
+</li>
+
+
+
+<!-- COMPANY EMAIL ADRESS OUTPUT -->
+<li class="item-226">
+
+<img src="<?=Yii::app()->theme->baseUrl?>/public/site/img/mail.png" alt="<?=CHtml::encode($_company->email)?>" />
+
+<span class="image-title"><?=CHtml::encode($_company->email)?></span>
+
+</li>
+
+
+
+<!-- COMPANY PHONES OUTPUT -->
+<li class="item-227">
+<span class="separator">
+
+<? if ((isset($_company)) && (!empty($_company->phones))) : ?>
+                            <? foreach ($_company->phones as $key => $phone) : ?>
+                                
+                            <? endforeach; ?>
+                        <? endif; ?>
+
+
+<!--
+
+<span class="image-title">+1 800 559 6580</span> 
+-->
+
+<img src="<?=Yii::app()->theme->baseUrl?>/public/site/img/phone.png" alt="<?=CHtml::encode($phone->value)?>" />
+
+<span class="image-title"><?=CHtml::encode($phone->value)?></span>
+</span>
+</li>	
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<!-- SITE SEARCH -->
+<div class="moduletable search-block  span4">
+<div class="module_container">
+<div role="search" class="mod-search mod-search__search-block">
+	<form action="<?=Yii::app()->baseUrl?>/index.php" method="post" class="navbar-form">
+		<label for="searchword" class="element-invisible">Search...</label> 
+<input id="searchword" name="searchword" maxlength="20"  class="inputbox mod-search_searchword" type="text" size="20" placeholder=" " required> 
+<button class="searchbutton" onclick="this.form.searchword.focus();">
+<i class="fa fa-search" >
+</i> 
+
+</button>  	
+
+<input type="hidden" name="task" value="search">
+		<input type="hidden" name="option" value="com_search">
+		<input type="hidden" name="Itemid" value="101">
+	</form>
+</div>
+</div>
+</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+<!-- Header -->
+<div id="header-row">
+ <div class="row-container">
+  <div class="container-fluid">
+<header>
+	<div class="row-fluid">
+
+
+<!-- LOGO IMAGE -->
+<div id="logo" class="span4">
+<a href="<?=Yii::app()->baseUrl?>">
+<img src="<?=Yii::app()->theme->baseUrl?>/public/site/img/logo.png" alt="joomlatest">
+<h1><?php echo CHtml::encode($this->pageTitle); ?></h1>
+<span class="hightlight"></span>
+</a>
+</div>
+
+
+<!-- MOBILE MENU BUTTON -->
+<div class = "main_menu_button_mobile">
+<i class="fa fa-bars"></i>
+
+</div>
+
+         <!-- MAIN MENU -->
+<div class="moduletable main_menu span8" style="height:173px">
+<div class="module_container" >
+<div class="icemegamenu" >
+		
+
+
+<script>(function(d, s, id) {						 
+ var js, fjs = d.getElementsByTagName(s)[0];						 
+ if (d.getElementById(id)) return;						 
+ js = d.createElement(s); js.id = id;						 
+ js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=296188807244109";						 
+ fjs.parentNode.insertBefore(js, fjs);						
+}(document, "script", "facebook-jssdk"));
+</script>		
+
+
+<!--  ******************************  HOME SUB MENU FORM BEGIN ************** -->
+
+
+
+      </div>
+
+<!-- MAIN MENU TABLE END -->
+
+
+<!-- MAIN MENU BEGIN -->
+
+	<?php $this->widget('NavigationWidget');?>
+	
+<script type="text/javascript">
+
+//$(document).ready(function(){
+	
+    $('.main li:nth-child(-n+6)').hover(
+        function() {
+        	//alert("gh");
+            $(this).addClass("active");
+            $(this).find('ul').stop(true, true); // останавливаем всю текущую анимацию
+            $(this).find('ul').slideDown();
+        },
+        function() {
+            $(this).removeClass("active");        
+            $(this).find('ul').slideUp('fast');
+        }
+    );
+//});
+
+	</script>
+			 
+
+
+			 
+<!-- MAIN MENU END -->
+
+
+</div>
+</div>
+									
+									</div>
+								</header>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+    <!-- Header END -->
+    
